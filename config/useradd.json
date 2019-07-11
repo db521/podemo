@@ -1,0 +1,16 @@
+{"add":
+        {
+        "chosen":["xpath","//*[@id='dept_chosen']/a"],
+        "dept":["xpath","//*[@id='dept_chosen']/div/ul/li[2]"],
+        "name":["name","account"],
+        "pwd1":["id","password1"],
+        "pwd2":["id","password2"],
+        "real":["id","realname"],
+        "role":["id","role"],
+        "top":["xpath","//*[@id='role']/option[9]"],
+        "chosen1":["xpath","//*[@id='group_chosen']/a"],
+        "group":["xpath","//*[@id='group_chosen']/div/ul/li[9]"],
+        "verify":["id","verifyPassword"],
+        "submit":["id","submit"]
+        }
+}

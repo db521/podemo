@@ -1,7 +1,11 @@
 
 {"login":
         {
-        "name":["id","username"],
-        "passwd":{"xpath":"//img[@class='xxx']"}
+        "elem":["id","zentao"],
+        "name":["id","account"],
+        "passwd":["name","password"],
+        "submit":["id","submit"],
+        "company":["xpath","//*[@id='navbar']/ul/li[9]/a"],
+        "useradd":["xpath","//*[@id='mainMenu']/div[3]/a[2]"]
         }
 }
