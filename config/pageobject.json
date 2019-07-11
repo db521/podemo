@@ -1,7 +1,9 @@
 
 {"login":
         {
-        "name":["id","username"],
-        "passwd":{"xpath":"//img[@class='xxx']"}
+        "loginbtn":["id","zentao"],
+        "account":["id","account","admin"],
+                "password":["name","password","131415aA~"],
+                "logins":["xpath","//*[@id='submit']"]
         }
 }
