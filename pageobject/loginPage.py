@@ -12,7 +12,8 @@ class login:
 
     def nameObj(self):  # 单个元素的获取方法
         try:
-            ss = json.loads('./config/pageobject.json')["login"]["name"]
+            with open(r'C:\Users\闫学谦\Desktop\podemo\config\pageobject.json')as f:
+                ss = json.loads(f.read())['login']['user']
             locatetype = ss[0]
             locatorExpression = ss[1]
             elemetObj = ge(self.driver, locatetype, locatorExpression)
@@ -22,7 +23,19 @@ class login:
 
     def passwdObj(self):  # 单个元素的获取方法
         try:
-            ss = json.loads('./config/pageobject.json')["login"]["passwd"]
+            with open(r'C:\Users\闫学谦\Desktop\podemo\config\pageobject.json')as f:
+                ss = json.loads(f.read())["login"]["passwd"]
+            locatetype = ss[0]
+            locatorExpression = ss[1]
+            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            return elemetObj
+        except Exception as e:
+            raise e
+
+    def zuzhiObj(self):  # 单个元素的获取方法
+        try:
+            with open(r'C:\Users\闫学谦\Desktop\podemo\config\pageobject.json')as f:
+                ss = json.loads(f.read())["login"]["zuzhi"]
             locatetype = ss[0]
             locatorExpression = ss[1]
             elemetObj = ge(self.driver, locatetype, locatorExpression)

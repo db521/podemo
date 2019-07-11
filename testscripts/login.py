@@ -17,9 +17,17 @@ def testloginZentao():
         driver = webdriver.Chrome()
         # user=excel解析后的user值
         # pass=excel解析后的值
-        driver.get(url=json.loads('./config/config.json')['url'])
-        user=''
-        passwd=''
+        with open(r'C:\Users\闫学谦\Desktop\podemo\config\config.json')as f:
+            uq = json.loads(f.read())['url']
+        driver.get(uq)
+        with open(r'C:\Users\闫学谦\Desktop\podemo\config\register.json')as f1:
+            uw = json.loads(f1.read())
+        user=uw['user']
+        passwd=uw['passwd']
         loginStep(driver, user, passwd)
     except Exception as e:
         raise e
+
+if __name__ == '__main__':
+    testloginZentao()
+
