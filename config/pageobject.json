@@ -1,7 +1,17 @@
 
 {"login":
         {
-        "name":["id","username"],
-        "passwd":{"xpath":"//img[@class='xxx']"}
+        "name":["id","account"],
+        "passwd":["xpath","//*[@id=\"loginPanel\"]/div/div[2]/form/table/tbody/tr[2]/td/input"],
+        "bnt": ["xpath","//*[@id=\"submit\"]"],
+        "zz":["xpath","//*[@id=\"navbar\"]/ul/li[9]/a"],
+        "yh": ["xpath","//*[@id=\"mainMenu\"]/div[3]/a[2]"],
+        "se" : ["xpath","//*[@id=\"dept_chosen\"]/a/div[1]/b"],
+        "c": ["xpath","//*[@id=\"dept_chosen\"]/div/ul/li[2]"],
+        "cname": ["xpath","//*[@id=\"account\"]"],
+        "pwd": ["xpath","//*[@id=\"password1\"]"],
+        "cpwd": ["xpath","//*[@id=\"password2\"]"],
+        "zname": ["id","realname"],
+        "xpwd": ["id","verifyPassword"]
         }
 }
