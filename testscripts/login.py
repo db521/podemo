@@ -6,7 +6,7 @@ import json
 
 from module.login import loginStep
 from selenium import webdriver
-
+from time import sleep
 
 def testloginZentao():
     """
@@ -17,9 +17,17 @@ def testloginZentao():
         driver = webdriver.Chrome()
         # user=excel解析后的user值
         # pass=excel解析后的值
-        driver.get(url=json.loads('./config/config.json')['url'])
-        user=''
-        passwd=''
+        with open(r"E:\WWW\podemo\config\config.json", mode="r")as f:
+            ss = json.loads(f.read())["url"]
+        driver.get(ss)
+        with open(r"E:\WWW\podemo\config\usepwd")as f1:
+            ss = json.loads(f1.read())
+        user = ss["user"]
+        passwd = ss["passwd"]
         loginStep(driver, user, passwd)
+        sleep(5)
     except Exception as e:
         raise e
+
+if __name__ == '__main__':
+    testloginZentao()
