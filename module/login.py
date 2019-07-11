@@ -13,3 +13,12 @@ def loginStep(driver, user, passwd):
         # 登陆操作
     except Exception as e:
         raise e
+
+if __name__ == '__main__':
+
+    from selenium import webdriver
+
+    dr = webdriver.Chrome()
+
+    log = loginStep(dr)
+

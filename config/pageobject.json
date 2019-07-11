@@ -1,7 +1,8 @@
 
 {"login":
         {
-        "name":["id","username"],
-        "passwd":{"xpath":"//img[@class='xxx']"}
+          "elem":["id","zentao"],
+          "name":["id","account"],
+          "passwd":["name","password"]
         }
 }
