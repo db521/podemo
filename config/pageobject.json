@@ -1,7 +1,13 @@
 
 {"login":
         {
-        "name":["id","username"],
-        "passwd":{"xpath":"//img[@class='xxx']"}
+        "name":["id","account"],
+        "passwd":["xpath","//table[@class='table table-form']//tr[2]/td/input"],
+        "button":["id","submit"],
+        "zuzhi":["xpath","//nav[@id='navbar']//li[9]/a"],
+        "bumen":["xpath","//div[@id='sidebar']//div/a"],
+        "dept_name":["xpath","//input[@id='depts[]'][1]"],
+        "dept_btn": ["xpath","//td[@class='form-actions']/button"],
+        "dept_list":["xpath","//table[@class='table table-form']//nobr/a"]
         }
 }
