@@ -1,7 +1,21 @@
 
 {"login":
         {
-        "name":["id","username"],
-        "passwd":{"xpath":"//img[@class='xxx']"}
+        "but":["id","zentao"],
+        "nname":["id","account"],
+        "passwd":["name","password"],
+        "alogin":["xpath","//button[@id='submit']"],
+         "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
+         "adduser":["xpath","//*[@id='mainMenu']/div[3]/a[2]"],
+         "cli":["xpath","//*[@id='dept_chosen']/a/div[1]/b"] ,
+         "bumen":["xpath","//*[@id='dept_chosen']/div/ul/li[2]"] ,
+         "names":["id","account"],
+         "passwds1":["id","password1"],
+         "passwds2":["id","password2"],
+         "zname":["id","realname"],
+         "test" :["xpath","//*[@id='role']/option[8]"],
+         "email":["id","email"],
+         "cname":["id","verifyPassword"] ,
+         "register":["xpath","//*[@id='submit']"]
         }
 }

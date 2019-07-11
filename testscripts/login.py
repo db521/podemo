@@ -14,12 +14,26 @@ def testloginZentao():
     :return:
     """
     try:
+        with open('../config/config.json',mode='r') as f:
+            ss = json.loads(f.read())['url']
         driver = webdriver.Chrome()
         # user=excel解析后的user值
         # pass=excel解析后的值
-        driver.get(url=json.loads('./config/config.json')['url'])
-        user=''
-        passwd=''
-        loginStep(driver, user, passwd)
+        driver.get(url=ss)
+        with open('../config/config.json',mode='r') as f:
+            aa = json.loads(f.read())
+        user=aa['user']
+        passwd=aa['password']
+        username = aa['username']
+        userpwd1 = aa['passwds1']
+        userpwd2 = aa['passwds2']
+        zname = aa['zname']
+        email = aa['email']
+        cname = aa['cname']
+        loginStep(driver, user, passwd,username,userpwd1,userpwd2,zname,email,cname)
     except Exception as e:
         raise e
+
+
+
+testloginZentao()
