@@ -1,7 +1,15 @@
 
 {"login":
         {
-        "name":["id","username"],
-        "passwd":{"xpath":"//img[@class='xxx']"}
+        "name":["id","account"],
+        "passwd":["name","password"]
+        },
+"add":
+        {
+        "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
+        "tianjia":["xpath","//*[@id='mainMenu']/div[3]/a[2]"],
+        "select":["xpath","//*[@id='dept_chosen']/a"],
+        "select2":["xpath","//*[@id='dept_chosen']/div/ul/li[2]"]
+
         }
 }

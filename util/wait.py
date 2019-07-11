@@ -11,6 +11,7 @@ def getElementImplicitWait(driver,locatetype,locatorExpection):
     :return:
     """
     try:
+
         element=WebDriverWait(driver,30).until(lambda x:x.find_element(by=locatetype,value=locatorExpection))
         return element
     except Exception as e:
