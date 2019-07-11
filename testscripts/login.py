@@ -6,6 +6,7 @@ import json
 
 from module.login import loginStep
 from selenium import webdriver
+from pageobject.loginPage import  login
 
 
 def testloginZentao():
@@ -17,9 +18,19 @@ def testloginZentao():
         driver = webdriver.Chrome()
         # user=excel解析后的user值
         # pass=excel解析后的值
-        driver.get(url=json.loads('./config/config.json')['url'])
-        user=''
-        passwd=''
+        # driver.get(url=json.loads('./config/config.json')['url'])
+        with open('../config/config.json', mode='r') as f:
+            ww = json.loads(f.read())
+            url = ww['url']
+            driver.get(url)
+        with open('../config/passwd.json', mode='r') as a:
+            zz = json.loads(a.read())
+        user = zz["login1"]["user"]
+        passwd = zz["login1"]["passwd"]
         loginStep(driver, user, passwd)
     except Exception as e:
         raise e
+
+
+if __name__ == '__main__':
+    testloginZentao()
