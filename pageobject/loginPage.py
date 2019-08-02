@@ -1,123 +1,81 @@
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*- 
-# @Time : 2019/6/30 17:01 
-# @File : loginPage.py
-import json
-from util.wait import getElementImplicitWait as ge
+# -*- coding: utf-8 -*-
+# import vie,ser,oth,mod,url
 from selenium import webdriver
+import json
+from util.wait import getElementImplicitWait
+
 class login:
-    def __init__(self, driver):
+    def __init__(self,driver):
         self.driver = driver
-    def userRead(self):
+
+    def btnobj(self):
         try:
-            with open('../config/user.json','r',encoding='utf-8' ) as  f:
-                sw=json.loads(f.read())
-            user1=sw['user']
-            print(user1)
+            with open('../config/pageobject.json','r',encoding='utf-8' ) as  f:
+                dicts=json.loads(f.read())
+            lists=dicts['login']['btn']
+            btntype = lists[0]
+            btnxp = lists[1]
+            element = getElementImplicitWait(self.driver,btntype,btnxp)
+
+            return element
+        except Exception as e:
+            raise e
+
+    def use_value(self):
+        try:
+            with open(r'F:\po\podemo_1\config\userlogin.json', 'r+',encoding='utf-8') as f:
+                dicts = json.loads(f.read())
+            user1 = dicts['name']
             return user1
         except Exception as e:
             raise e
-    def pwdRead(self):
+
+    def passwd_value(self):
         try:
-            with open('../config/user.json', 'r', encoding='utf-8') as  f:
-                sw=json.loads(f.read())
-            pwd=sw['passwd']
-            print(pwd)
-            return pwd
+            with open(r'F:\po\podemo_1\config\userlogin.json', 'r+',encoding='utf-8') as f:
+                dicts = json.loads(f.read())
+            password = dicts['password']
+            return password
         except Exception as e:
             raise e
 
-    def nameObj(self):  # 单个元素的获取方法
+    def useobj(self):
         try:
-            with open('../config/pageobject.json','r',encoding='utf-8') as f:
-                sw= json.loads(f.read())
-            ss = sw["login"]["name"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            # print(1111111)
-            # print(locatetype,locatorExpression)
-
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
-
-            return elemetObj
+            with open('../config/pageobject.json','r',encoding='utf-8' ) as  f:
+                dicts=json.loads(f.read())
+            lists=dicts['login']['username']
+            btntype = lists[0]
+            btnxp = lists[1]
+            element = getElementImplicitWait(self.driver,btntype,btnxp)
+            return element
         except Exception as e:
             raise e
 
-    def passwdObj(self):  # 单个元素的获取方法
+    def passwdobj(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["passwd"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            # print(22222222)
-            # print(locatetype,locatorExpression)
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
-            return elemetObj
+            with open('../config/pageobject.json','r',encoding='utf-8' ) as  f:
+                dicts=json.loads(f.read())
+            lists=dicts['login']['passwd']
+            btntype = lists[0]
+            btnxp = lists[1]
+            element = getElementImplicitWait(self.driver,btntype,btnxp)
+            return element
         except Exception as e:
             raise e
 
-    def btnObj(self):  # 单个元素的获取方法
+    def loginobj(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["btn"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            print(333333)
-            print(locatetype,locatorExpression)
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
-            return elemetObj
+            with open('../config/pageobject.json','r',encoding='utf-8' ) as  f:
+                dicts=json.loads(f.read())
+            lists=dicts['login']['logins']
+            btntype = lists[0]
+            btnxp = lists[1]
+            element = getElementImplicitWait(self.driver,btntype,btnxp)
+            return element
         except Exception as e:
             raise e
 
-    def zuzhiObj(self):  # 单个元素的获取方法
-        try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["zuzhi"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            # print(333333)
-            print(locatetype,locatorExpression)
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
-            return elemetObj
-        except Exception as e:
-            raise e
-    def addObj(self):  # 单个元素的获取方法
-        try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["add"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            # print(333333)
-            # print(locatetype,locatorExpression)
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
-            return elemetObj
-        except Exception as e:
-            raise e
 
-    # def nameObj(self):  # 单个元素的获取方法
-    #     try:
-    def fengz(self):
-        with open('../config/pageobject.json','r',encoding='utf-8') as f:
-            sw= json.loads(f.read())
-            try:
-                dict=sw['login']
-                for key in dict.keys():
-                    ss = sw["login"]["{}".format(key)]
-                    locatetype = ss[0]
-                    locatorExpression = ss[1]
-                    print(key)
-                    print(locatetype,locatorExpression)
-                    # print(dict)
-                    elemetObj = ge(self.driver, locatetype, locatorExpression)
 
-                # return elemetObj
-            except Exception as e:
-                raise e
-if __name__ == '__main__':
-    driver=webdriver.Chrome()
-    logins=login(driver)
-    logins.fengz()
+if __name__ == "__main__":
+    driver = webdriver.Chrome()
