@@ -1,20 +1,21 @@
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*- 
-# @Time : 2019/6/30 17:26 
-# @File : login.py
-from pageobject.loginPage import login
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Time    : 2019/8/2 14:05
+# @Author  : 郭轩甫
+# @Site    : 
+# @File    : login.py
+# @Software: PyCharm
 
+from pageobject.loginpage import login
 
 def loginStep(driver):
     try:
-        logins = login(driver)
-
-
+        logins=login(driver)
+        logins.zenObj().click()
         logins.nameObj().send_keys(logins.userRead())
-        logins.passwdObj().send_keys(logins.pwdRead())
+        logins.passwordObj().send_keys(logins.pwdRead())
         logins.btnObj().click()
         logins.zuzhiObj().click()
         logins.addObj().click()
-        # 登陆操作
     except Exception as e:
         raise e
