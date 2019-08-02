@@ -17,14 +17,15 @@ def testloginZentao():
         driver = webdriver.Chrome()
         # user=excel解析后的user值
         # pass=excel解析后的值
-        with open('../config/config.json','r+')as f:
-            w=json.loads(f.read())
+        with open('../config/config.json', 'r+')as f:
+            w = json.loads(f.read())
         url = w['url']
         driver.get(url)
         loginStep(driver)
 
     except Exception as e:
         raise e
+
 
 if __name__ == '__main__':
     testloginZentao()
