@@ -1,0 +1,13 @@
+{
+  "login":
+        {
+          "zdbtn":["xpath","//*[@id='zentao']"],
+        "name":["id","account"],
+        "passwd":["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
+          "btn":["xpath","//*[@id='submit']"],
+          "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
+          "bumen":["xpath","//*[@id='subNavbar']/ul/li[2]/a"],
+          "sty":["xpath","//*[@id='deptTree']/li[3]/ul/li[10]/span/a"]
+
+        }
+}
