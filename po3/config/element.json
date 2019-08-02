@@ -1,0 +1,15 @@
+{
+  "ky": ["id","zentao"],
+  "login": {
+    "user": ["name","account"],
+    "passwd": ["xpath","//*[@id=\"loginPanel\"]/div/div[2]/form/table/tbody/tr[2]/td/input"],
+    "btn": ["id","submit"]
+  },
+  "zuzhi": ["xpath","//*[@id=\"navbar\"]/ul/li[9]/a"],
+  "bumen": ["xpath","//*[@id=\"subNavbar\"]/ul/li[2]/a"],
+  "i": ["xpath","//*[@id=\"deptTree\"]/li[3]/i"],
+  "xiao": ["xpath","//*[@id=\"deptTree\"]/li[3]/ul/li[9]/span/a"],
+  "add_value": ["id","depts[]"],
+  "add_bumen": ["id","submit"]
+
+}
