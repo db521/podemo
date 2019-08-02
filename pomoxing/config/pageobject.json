@@ -1,0 +1,9 @@
+{
+  "login":{
+    "name":["id","zentao"],
+    "passwd":["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
+    "btn":["xpath","//*[@id='submit']"],
+    "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
+    "add":["xpath","//*[@id='mainMenu']/div[3]/a[2]"]
+  }
+}
