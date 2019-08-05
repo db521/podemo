@@ -1,13 +1,13 @@
 {
-  "login":
-          {
-  "zentao":["id","zentao"],
-  "user":["id","account"],
-  "passwd":["name","password"],
-  "btn":["xpath","//*[@id='submit']"],
-  "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
-  "add":["xpath","//*[@id='mainMenu']/div[3]/a[2]"]
+  "login":{
+    "zentao":["id","zentao"],
+    "user":["id","account"],
+    "passwd":["name","password"],
+    "btn":["xpath","//*[@id='submit']"],
+    "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
+    "bumen":["xpath","//*[@id='subNavbar']/ul/li[2]/a"],
+    "add":["xpath","//*[@id='deptTree']/li[3]/ul/li[7]/span/a"],
+    "addname":["xpath","//*[@class='w-300px']/input[@class = 'form-control']"]
 
-
-}
+  }
 }
