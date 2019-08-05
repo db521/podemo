@@ -1,0 +1,7 @@
+{
+  "access": {
+    "name": ["id","account"],
+    "passwd": ["name","password"],
+    "btn": ["id","submit"]
+  }
+}
