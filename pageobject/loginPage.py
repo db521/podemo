@@ -1,113 +1,108 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-# @Time    : 2019/8/1 15:36
+# @Time    : 2019/8/5 8:44
 # @Author  : 郭轩甫
 # @Site    : 
 # @File    : loginpage.py
 # @Software: PyCharm
 
+
 import json
 from selenium import webdriver
-from util.wait import getElementImplicitWait as ge
+from util.wait import ElementWait as ge
+
 class login:
     def __init__(self,driver):
         self.driver=driver
-
-
-    def zenObj(self):
+    def zenObg(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["zentao"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            print(1111)
-            print(locatetype,locatorExpression)
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            with open('../config/pageobject.json','r',encoding='utf-8')as f:
+                sw=json.loads(f.read())
+            ss=sw['login']['zentao']
+            loginType=ss[0]
+            loginElement=ss[1]
+            elemetObj=ge(self.driver,loginType,loginElement)
             return elemetObj
         except Exception as e:
             raise e
+
 
     def userRead(self):
         try:
-            with open('../config/user.json','r',encoding='utf-8' ) as  f:
+            with open('../config/user.json','r',encoding='utf-8')as f:
                 sw=json.loads(f.read())
-            user1=sw['user']
-            print(user1)
-            return user1
+            user=sw['user']
+            print(user)
+            return user
         except Exception as e:
             raise e
 
-    def pwdRead(self):
+    def passwordRead(self):
         try:
-            with open('../config/user.json','r',encoding='utf-8' ) as  f:
+            with open('../config/user.json','r',encoding='utf-8')as f:
                 sw=json.loads(f.read())
-            pwd=sw['password']
-            print(pwd)
-            return pwd
+            password=sw['password']
+            return password
         except Exception as e:
             raise e
 
-    def nameObj(self):
+    def nameObg(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["name"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            with open('../config/pageobject.json','r',encoding='utf-8')as f:
+                sw=json.loads(f.read())
+            ss=sw['login']['name']
+            loginType=ss[0]
+            loginElement=ss[1]
+            elemetObj=ge(self.driver,loginType,loginElement)
             return elemetObj
         except Exception as e:
             raise e
 
-    def passwordObj(self):
+    def passwordObg(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["password"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            with open('../config/pageobject.json','r',encoding='utf-8')as f:
+                sw=json.loads(f.read())
+            ss=sw['login']['password']
+            loginType=ss[0]
+            loginElement=ss[1]
+            elemetObj=ge(self.driver,loginType,loginElement)
             return elemetObj
         except Exception as e:
             raise e
 
-    def btnObj(self):
+    def btnObg(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["btn"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            with open('../config/pageobject.json','r',encoding='utf-8')as f:
+                sw=json.loads(f.read())
+            ss=sw['login']['btn']
+            loginType=ss[0]
+            loginElement=ss[1]
+            elemetObj=ge(self.driver,loginType,loginElement)
             return elemetObj
-
         except Exception as e:
             raise e
 
-    def zuzhiObj(self):
+    def zuzhiObg(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["zuzhi"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            with open('../config/pageobject.json','r',encoding='utf-8')as f:
+                sw=json.loads(f.read())
+            ss=sw['login']['zuzhi']
+            loginType=ss[0]
+            loginElement=ss[1]
+            elemetObj=ge(self.driver,loginType,loginElement)
             return elemetObj
-
         except Exception as e:
             raise e
 
-    def addObj(self):
+    def addObg(self):
         try:
-            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
-                sw = json.loads(f.read())
-            ss = sw["login"]["add"]
-            locatetype = ss[0]
-            locatorExpression = ss[1]
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            with open('../config/pageobject.json','r',encoding='utf-8')as f:
+                sw=json.loads(f.read())
+            ss=sw['login']['add']
+            loginType=ss[0]
+            loginElement=ss[1]
+            elemetObj=ge(self.driver,loginType,loginElement)
             return elemetObj
-
         except Exception as e:
             raise e
 
