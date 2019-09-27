@@ -1,7 +1,0 @@
-{"cli":{"zen":["id","zentao"]},
-  "user":{
-  "zhang":["id","account"],
-    "password":["name","password"]
-},
-  "button":["id","submit"]
-}

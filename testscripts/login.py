@@ -21,7 +21,8 @@ def testloginZentao():
             w=json.loads(f.read())
         url = w['url']
         driver.get(url)
-        loginStep(driver)
+        loginStep(driver,name,passwd)
+        newuser(driver,"zhangsan","123456")
 
     except Exception as e:
         raise e

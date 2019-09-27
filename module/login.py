@@ -5,16 +5,16 @@
 from pageobject.loginPage import login
 
 
-def loginStep(driver):
+def loginStep(driver,name,passwd):
     try:
         logins = login(driver)
-
-
-        logins.nameObj().send_keys(logins.userRead())
-        logins.passwdObj().send_keys(logins.pwdRead())
+        logins.nameObj().send_keys(name)
+        logins.passwdObj().send_keys(passwd)
         logins.btnObj().click()
-        logins.zuzhiObj().click()
-        logins.addObj().click()
+
         # 登陆操作
     except Exception as e:
         raise e
+
+if __name__ == '__main__':
+    pass
