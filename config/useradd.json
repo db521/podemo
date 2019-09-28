@@ -1,0 +1,17 @@
+
+
+{
+  "zuzhi":["xpath","//*[@id='navbar']/ul/li[8]/a"],
+"useradd":["xpath","//*[@id='mainMenu']/div[3]/a[2]"],
+
+  "username":["id","account"],
+  "password":["id","password1"],
+  "password2":["id","password2"],
+  "name":["id","realname"],
+  "zhiwei":["id","role"],
+  "group":["id","group"],
+  "email":["id","email"],
+  "yuser":["id","commiter"],
+  "ypasswd":["id","verifyPassword"],
+  "sver":["xpath","//*[@id='submit']"]
+}
