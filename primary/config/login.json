@@ -1,0 +1,17 @@
+{
+  "login": {
+    "zentao": ["id","zentao"],
+    "username_box": ["id","account"],
+    "password_box": ["name","password"],
+    "login_btn": ["id","submit"]
+  },
+    "add_user_page":{
+    "add_user_btn": ["xpath","//*[@id=\"mainMenu\"]/div[3]/a[2]"],
+    "zuzhi": ["xpath","//*[@id=\"navbar\"]/ul/li[8]/a"],
+    "username": ["id","account"],
+    "password": ["id","password1"],
+    "real_password": ["id","password2"],
+    "real_username": ["id","realname"],
+    "ranking": ["id","role"]
+  }
+}
