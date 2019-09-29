@@ -1,0 +1,8 @@
+{
+  "login":{
+    "zentao":["id","zentao"],
+    "account":["id","account"],
+    "password":["name","password"],
+    "enter":["id","submit"]
+  }
+}

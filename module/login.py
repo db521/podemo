@@ -1,20 +1,16 @@
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*- 
-# @Time : 2019/6/30 17:26 
-# @File : login.py
-from pageobject.loginPage import login
+from po.login import Login
+from util.parsejson import parseurl as ul
+from util.parsejson import parseuser as pu
 
-
-def loginStep(driver,name,passwd):
-    try:
-        logins = login(driver)
-        logins.nameObj().send_keys(name)
-        logins.passwdObj().send_keys(passwd)
-        logins.btnObj().click()
-
-        # 登陆操作
-    except Exception as e:
-        raise e
+def login(a):
+    Login(a).zentao().click()
+    content = pu()
+    Login(a).user().send_keys(content[0])
+    Login(a).pwd().send_keys(content[1])
+    Login(a).dengluanniu().click()
 
 if __name__ == '__main__':
-    pass
+    from selenium import webdriver
+    driver = webdriver.Chrome()
+    driver.get(ul("url"))
+    login(a=driver)
