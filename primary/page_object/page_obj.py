@@ -1,5 +1,6 @@
-from util.Parsing_json import Parsing_Json
 from util.util import Display_wait
+from util.Parsing_json import Parsing_Json
+
 class Add_User():
     def __init__(self,driver):
         self.parse = Parsing_Json()
@@ -32,3 +33,30 @@ class Add_User():
     def parsing_ranking(self):
         ranking_obj = self.parse.parsing_strategy_locators(r'../config/login.json',"add_user_page","ranking")
         return self.wait.get_element_display_wait(ranking_obj[0],ranking_obj[1])
+
+    def parsing_group(self):
+        group_obj = self.parse.parsing_strategy_locators(r'../config/login.json',"add_user_page","group")
+        print(group_obj)
+        return self.wait.get_element_display_wait(group_obj[0],group_obj[1])
+
+    def parsing_email(self):
+        email_obj = self.parse.parsing_strategy_locators(r'../config/login.json',"add_user_page","email")
+        return self.wait.get_element_display_wait(email_obj[0],email_obj[1])
+
+    def parsing_commiter(self):
+        commiter_obj = self.parse.parsing_strategy_locators(r'../config/login.json',"add_user_page","commiter")
+        return self.wait.get_element_display_wait(commiter_obj[0],commiter_obj[1])
+
+    def parsing_genderf(self):
+        genderf_obj = self.parse.parsing_strategy_locators(r'../config/login.json',"add_user_page","genderf")
+        return self.wait.get_element_display_wait(genderf_obj[0],genderf_obj[1])
+
+    def parsing_verifyPassword(self):
+        verifyPassword_obj = self.parse.parsing_strategy_locators(r'../config/login.json',"add_user_page","system_pwd")
+        return self.wait.get_element_display_wait(verifyPassword_obj[0],verifyPassword_obj[1])
+
+    def parsing_Preservation(self):
+        Preservation_obj = self.parse.parsing_strategy_locators(r'../config/login.json',"add_user_page","Preservation")
+        return self.wait.get_element_display_wait(Preservation_obj[0],Preservation_obj[1])
+
+

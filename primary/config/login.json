@@ -12,6 +12,12 @@
     "password": ["id","password1"],
     "real_password": ["id","password2"],
     "real_username": ["id","realname"],
-    "ranking": ["id","role"]
+    "ranking": ["id","role"],
+    "group": ["id","group"],
+    "email": ["id","email"],
+    "commiter": ["id","commiter"],
+    "genderf": ["id","genderf"],
+    "system_pwd": ["id","verifyPassword"],
+    "Preservation": ["id","submit"]
   }
 }
