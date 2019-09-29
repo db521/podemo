@@ -1,0 +1,13 @@
+{
+  "ky":["id","zentao"],
+  "login": {
+    "user": ["name","account"],
+    "passwd": ["xpath","//*[@id=\"loginPanel\"]/div/div[2]/form/table/tbody/tr[2]/td/input"],
+    "btn": ["id","submit"]
+  },
+  "caozuo":{
+    "richeng":["xpath","//*[@id='navbar']/ul/li[8]/a"],
+    "bumen":["xpath","//*[@id='subNavbar']/ul/li[2]/a"]
+  }
+
+}
