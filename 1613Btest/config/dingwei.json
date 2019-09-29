@@ -1,0 +1,14 @@
+{
+  "login": {
+    "zentao": ["id","zentao"],
+    "account": ["id","account"],
+    "password": ["name","password"]
+  },
+  "bug": {
+    "zentao": ["id","zentao"],
+    "account": ["id","account"],
+    "password": ["name","password"]
+  }
+
+
+}
