@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 def getElementImplicitWait(driver,locatetype,locatorExpection):
     """
-    传入一个定位的元素，然后自动进行隐式等待
+    传入一个定位的元素，然后自动进行显式等待
     :return:
     """
     try:

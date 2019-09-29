@@ -34,8 +34,8 @@ class login:
             ss = sw["login"]["name"]
             locatetype = ss[0]
             locatorExpression = ss[1]
-            # print(1111111)
-            # print(locatetype,locatorExpression)
+            print(1111111)
+            print(locatetype,locatorExpression)
 
             elemetObj = ge(self.driver, locatetype, locatorExpression)
 
@@ -50,8 +50,8 @@ class login:
             ss = sw["login"]["passwd"]
             locatetype = ss[0]
             locatorExpression = ss[1]
-            # print(22222222)
-            # print(locatetype,locatorExpression)
+            print(22222222)
+            print(locatetype,locatorExpression)
             elemetObj = ge(self.driver, locatetype, locatorExpression)
             return elemetObj
         except Exception as e:
@@ -78,7 +78,7 @@ class login:
             ss = sw["login"]["zuzhi"]
             locatetype = ss[0]
             locatorExpression = ss[1]
-            # print(333333)
+            print(333333)
             print(locatetype,locatorExpression)
             elemetObj = ge(self.driver, locatetype, locatorExpression)
             return elemetObj
@@ -111,10 +111,10 @@ class login:
                     locatorExpression = ss[1]
                     print(key)
                     print(locatetype,locatorExpression)
-                    # print(dict)
+                    print(dict)
                     elemetObj = ge(self.driver, locatetype, locatorExpression)
 
-                # return elemetObj
+                    return elemetObj
             except Exception as e:
                 raise e
 if __name__ == '__main__':
