@@ -1,0 +1,9 @@
+{
+  "login":
+  {
+    "zengtao": ["id","zentao"],
+    "name": ["id","account"],
+    "passwd": ["name","password"],
+    "btn": ["xpath","*[@id='submit']"]
+  }
+}
