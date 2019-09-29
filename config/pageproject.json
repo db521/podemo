@@ -1,0 +1,12 @@
+{
+  "login":{
+    "name":["id","account"],
+    "passwd":["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
+    "btn":["xpath","//*[@id='submit']"],
+    "yonghu":["xpath","//*[@id='subNavbar']/ul/li[1]/a"],
+    "useradd":["xpath","//*[@id='mainMenu']/div[3]/a[2]"],
+    "bumen":["xpath","//*[@id='dept']"],
+    "zhiwei":["xpath","//*[@id='role']"]
+
+  }
+}
