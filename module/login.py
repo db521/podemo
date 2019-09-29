@@ -1,20 +1,13 @@
-#!/usr/bin/env python 
-# -*- coding: utf-8 -*- 
-# @Time : 2019/6/30 17:26 
-# @File : login.py
-from pageobject.loginPage import login
+from po.login import Login
+from util.parsejson import UserInfo
+from selenium.webdriver.common.keys import Keys
+import time
 
+username = UserInfo('user')
+passwd = UserInfo('pwd')
 
-def loginStep(driver,name,passwd):
-    try:
-        logins = login(driver)
-        logins.nameObj().send_keys(name)
-        logins.passwdObj().send_keys(passwd)
-        logins.btnObj().click()
-
-        # 登陆操作
-    except Exception as e:
-        raise e
-
-if __name__ == '__main__':
-    pass
+def login(driver):
+    Login(driver).zentao().click()
+    Login(driver).user().send_keys(username)
+    Login(driver).password().send_keys(passwd+Keys.RETURN)
+    time.sleep(5)
