@@ -1,0 +1,7 @@
+{
+  "login":{
+    "zentao":["id","zentao"],
+    "account":["id","account"],
+    "passwd":["name","password"]
+  }
+}
