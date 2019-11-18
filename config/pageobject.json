@@ -1,10 +1,16 @@
 
 {"login":
         {
-        "name":["id","account"],
-        "passwd":["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
-          "btn":["xpath","//*[@id='submit']"],
-          "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
-          "add":["xpath","//*[@id='mainMenu']/div[3]/a[2]"]
-        }
+        "name":["By.ID","account"],
+        "passwd":["By.XPATH","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
+          "btn":["By.XPATH","//*[@id='submit']"],
+          "zuzhi":["By.XPATH","//*[@id='navbar']/ul/li[9]/a"],
+          "add":["By.XPATH","//*[@id='mainMenu']/div[3]/a[2]"]
+        },
+  "add_bumen":{
+        "click_group":["By.LINK_TEXT","组织"],
+        "click_bumen":["By.LINK_TEXT","部门"],
+        "input_bumen":["By.NAME","depts[]"],
+        "submit":["By.ID","submit"]
+  }
 }
