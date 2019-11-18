@@ -1,0 +1,5 @@
+{
+  "username": ["xpath","//*[@id='account']"],
+  "password": ["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
+  "button": ["xpath","//*[@id='submit']"]
+}
