@@ -1,0 +1,7 @@
+{
+  "login":{
+    "name":["id","account"],
+    "password":["name","password"],
+    "btn":["xpath","//*[@id='submit']"]
+  }
+}
