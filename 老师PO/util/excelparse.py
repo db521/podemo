@@ -3,6 +3,7 @@
 # @Time : 2019/6/30 16:56 
 # @File : excelparse.py 
 import openpyxl
+from selenium.webdriver.support.ui import WebDriverWait
 class ParseExcel:
     def readExcel(self,excelpath):
         self.workbook=openpyxl.load_workbook(excelpath)

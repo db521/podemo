@@ -3,7 +3,7 @@
 # @Time : 2019/6/30 17:01 
 # @File : loginPage.py
 import json
-from util.wait import getElementImplicitWait as ge
+from ..util.wait import getElementImplicitWait as ge
 from selenium import webdriver
 class login:
     def __init__(self, driver):

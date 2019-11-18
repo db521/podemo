@@ -4,7 +4,7 @@
 # @File : login.py
 import json
 
-from module.login import loginStep
+from ..module.login import loginStep
 from selenium import webdriver
 
 
@@ -21,6 +21,10 @@ def testloginZentao():
             w=json.loads(f.read())
         url = w['url']
         driver.get(url)
+        # with open('../config/user.json','r+')as f:
+        #     x=json.loads(f.read())
+        # name = x['user']
+        # passwd=x['passwd']
         loginStep(driver,name,passwd)
         newuser(driver,"zhangsan","123456")
 

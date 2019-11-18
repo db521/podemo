@@ -1,0 +1,8 @@
+{
+  "login":
+  {
+    "user":["id","account"],
+    "passwd":["name","password"],
+    "login":["id","submit"]
+  }
+}
