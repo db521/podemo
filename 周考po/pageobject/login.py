@@ -12,7 +12,7 @@ class login:
             type = v[0]
             value = v[1]
             element = getelement(self.dr,type,value)
-            return enlement
+            return element
         except Exception as e:
             raise e
 
@@ -22,7 +22,7 @@ class login:
             type = v[0]
             value = v[1]
             element = getelement(self.dr,type,value)
-            return enlement
+            return element
         except Exception as e:
             raise e
 
@@ -32,6 +32,6 @@ class login:
             type = v[0]
             value = v[1]
             element = getelement(self.dr,type,value)
-            return enlement
+            return element
         except Exception as e:
             raise e
