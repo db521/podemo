@@ -1,0 +1,6 @@
+{
+  "login":
+  { "user":["name","admin"],
+    "passwd":["passwd","123456aA"]
+  }
+}
