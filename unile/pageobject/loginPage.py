@@ -43,7 +43,7 @@ class login:
             ss = sw["login"]["btn"]
             locatetype = ss[0]
             locatorExpression = ss[1]
-            print(333333)
+            # print(333333)
             print(locatetype,locatorExpression)
             elemetObj = ge(self.driver, locatetype, locatorExpression)
             return elemetObj
@@ -73,6 +73,18 @@ class login:
             # print(333333)
             # print(locatetype,locatorExpression)
             elemetObj = ge(self.driver, locatetype, locatorExpression)
+            return elemetObj
+        except Exception as e:
+            raise e
+
+    def bumenObj(self):
+        try:
+            with open('../config/pageobject.json','r',encoding='utf-8') as f:
+                sw=json.loads(f.read())
+            ss=sw["login"]["bumen"]
+            locatetype=ss[0]
+            locatorWxpression=ss[1]
+            elemetObj=ge(self.driver,locatetype,locatorWxpression)
             return elemetObj
         except Exception as e:
             raise e
