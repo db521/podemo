@@ -1,0 +1,15 @@
+{
+  "login":{
+    "name":["id","account"],
+    "passwd":["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
+    "btn":["id","submit"],
+    "use":["xpath","//*[@id='userNav']/li/a/span[1]"],
+    "zhuti":["xpath","//*[@id='userNav']/li/ul/li[6]/a"],
+    "bes":["xpath","//*[@id='userNav']/li/ul/li[6]/ul/li[3]/a"],
+    "zuzhi":["xpath","//*[@id='navbar']/ul/li[13]/a"],
+    "bumen":["xpath","//*[@id='subNavbar']/ul/li[2]/a"],
+    "addbm":["xpath","//*[@id='depts[]']"],
+    "baocun":["xpath","//*[@id='submit']"],
+    "dels":["xpath","//*[@id='deptTree']/li[2]/div/a[3]/i"]
+  }
+}
