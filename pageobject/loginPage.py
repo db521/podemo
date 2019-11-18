@@ -4,8 +4,8 @@
 # @File : loginPage.py
 import json
 from util.wait import getElementImplicitWait as ge
-from selenium import webdriver
-class login:
+
+class login():
     def __init__(self, driver):
         self.driver = driver
 
@@ -74,10 +74,39 @@ class login:
             # print(locatetype,locatorExpression)
             elemetObj = ge(self.driver, locatetype, locatorExpression)
             return elemetObj
+
+        except Exception as e:
+            raise e
+
+    def ejbumen(self):  # 单个元素的获取方法
+        try:
+            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
+                sw = json.loads(f.read())
+            ss = sw["login"]["ejk"]
+            locatetype = ss[0]
+            locatorExpression = ss[1]
+            # print(333333)
+            # print(locatetype,locatorExpression)
+            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            return elemetObj
+        except Exception as e:
+            raise e
+    def Shuru(self):  # 单个元素的获取方法
+        try:
+            with open('../config/pageobject.json', 'r', encoding='utf-8') as f:
+                sw = json.loads(f.read())
+            ss = sw["login"]["addbm"]
+            locatetype = ss[0]
+            locatorExpression = ss[1]
+            # print(333333)
+            # print(locatetype,locatorExpression)
+            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            return elemetObj
         except Exception as e:
             raise e
 
 if __name__ == '__main__':
+    from selenium import webdriver
     driver=webdriver.Chrome()
     logins=login(driver)
     logins.nameObj()

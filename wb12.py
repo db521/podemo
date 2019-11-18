@@ -1,5 +1,5 @@
 from selenium import webdriver
-url='http://94.191.28.11'
+url='http://127.0.0.1/biz/user-login-L2Jpei8=.html'
 from selenium.webdriver.common.keys import Keys
 
 bs=webdriver.Chrome()

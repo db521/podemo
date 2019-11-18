@@ -4,7 +4,10 @@
         "name":["id","account"],
         "passwd":["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
           "btn":["xpath","//*[@id='submit']"],
-          "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
-          "add":["xpath","//*[@id='mainMenu']/div[3]/a[2]"]
+          "zuzhi":["xpath","//*[@id='navbar']/ul/li[13]/a"],
+          "add":["xpath","//*[@id='subNavbar']/ul/li[2]/a"],
+          "ejk":["xpath","//*[@id='deptTree']/li[1]/ul/li/span/a"],
+          "addbm":["xpath","//*[@id='mainContent']/div[2]/div/div[2]/form/table/tbody/tr[1]/td[2]/input"]
+          //*[@id="depts[]"]
         }
 }
