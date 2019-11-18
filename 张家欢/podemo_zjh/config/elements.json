@@ -1,0 +1,14 @@
+{
+  "uelement": [
+    "id",
+    "account"
+  ],
+  "pelement": [
+    "name",
+    "password"
+  ],
+  "sbelement": [
+    "id",
+    "submit"
+  ]
+}
