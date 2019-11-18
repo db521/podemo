@@ -4,9 +4,11 @@
 # @File : login.py
 import json
 
-from module.login import loginStep
+from module.login import loginStep,Addbumen
 from selenium import webdriver
 
+
+import time
 
 def testloginZentao():
     """
@@ -17,12 +19,29 @@ def testloginZentao():
         driver = webdriver.Chrome()
         # user=excel解析后的user值
         # pass=excel解析后的值
-        with open('../config/config.json','r+')as f:
+        with open('../config/urls.json','r')as f:
             w=json.loads(f.read())
         url = w['url']
         driver.get(url)
-        loginStep(driver,name,passwd)
-        newuser(driver,"zhangsan","123456")
+
+        with open('../config/addbumen.json','r')as f:
+            bumen=json.loads(f.read())
+        Abumen = bumen['shuru']
+
+        time.sleep(3)
+
+        with open('../config/user.json','r')as f:
+            pswd=json.loads(f.read())
+        user = pswd['user']
+        passwd = pswd['passwd']
+        loginStep(driver,user,passwd)
+        Addbumen(driver,Abumen)
+        # newuser(driver,"zhangsan","123456")
+
+
+
+        time.sleep(3)
+
 
     except Exception as e:
         raise e

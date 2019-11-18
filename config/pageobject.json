@@ -4,7 +4,12 @@
         "name":["id","account"],
         "passwd":["xpath","//*[@id='loginPanel']/div/div[2]/form/table/tbody/tr[2]/td/input"],
           "btn":["xpath","//*[@id='submit']"],
-          "zuzhi":["xpath","//*[@id='navbar']/ul/li[9]/a"],
+          "zuzhi":["xpath","//*[@id='navbar']/ul/li[13]/a"],
+          "bumen":["xpath","//*[@id='subNavbar']/ul/li[2]/a"],
+          "yijibumen":["xpath","//*[@id='deptTree']/li[2]/span/a"],
+
+          "erjikuang":["xpath","//*[@id='mainContent']/div[2]/div/div[2]/form/table/tbody/tr[1]/td[2]/input[2]"],
+          "submits":["xpath","//*[@id='submit']"],
           "add":["xpath","//*[@id='mainMenu']/div[3]/a[2]"]
         }
 }
