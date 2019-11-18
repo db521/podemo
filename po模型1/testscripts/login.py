@@ -17,7 +17,7 @@ def testloginZentao():
         driver = webdriver.Chrome()
         # user=excel解析后的user值
         # pass=excel解析后的值
-        with open('../config/config.json','r+')as f:
+        with open('../config/urls.json','r+')as f:
             w=json.loads(f.read())
         url = w['url']
         driver.get(url)

@@ -45,7 +45,7 @@ class login:
             locatorExpression = ss[1]
             print(333333)
             print(locatetype,locatorExpression)
-            elemetObj = ge(self.driver, locatetype, locatorExpression)
+            elemetObj = ge(self.driver, locatetype,locatorExpression)
             return elemetObj
         except Exception as e:
             raise e

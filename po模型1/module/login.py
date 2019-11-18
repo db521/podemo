@@ -17,4 +17,7 @@ def loginStep(driver,name,passwd):
         raise e
 
 if __name__ == '__main__':
-    pass
+    from selenium import webdriver
+    driver=webdriver.Chrome()
+    driver.get('http://127.0.0.1/biz/user-login-L2Jpei8=.html')
+    loginStep(driver,'admin','123456aA')
