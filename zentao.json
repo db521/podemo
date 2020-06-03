@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "dfeedbe3-0ace-4c6b-9315-439e31208fb9",
+		"name": "禅道登陆接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://39.98.139.127/user-login.html",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "88c30d2c-b0c5-4d62-ab8b-87ad86d1e68b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"success\");",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "http://39.98.139.127"
+					},
+					{
+						"key": "Referer",
+						"value": "http://39.98.139.127/user-login.html"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "Cookie",
+						"value": "zentaosid=qcq4qscl369340m0fhuavu8hd0; lang=zh-cn; device=desktop; preBranch=0; bugModule=0; lastBugModule=0; moduleBrowseParam=0; productBrowseParam=0; projectTaskOrder=status%2Cid_desc; preProductID=2; storyModule=0; lastProduct=2; productStoryOrder=id_desc; lastCaseModule=0; caseModule=0; selfClose=0; storyPreProjectID=3; storyModuleParam=0; storyProductParam=0; storyBranchParam=0; lastStoryModule=0; projectStoryOrder=id_desc; qaBugOrder=openedDate_desc; theme=default; lastProject=4; preProjectID=4; windowHeight=666; ajax_lastNext=on; windowWidth=432"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "account={{username}}&password=af58aec39c16d66662943adf14a70cb3&passwordStrength=1&referer=%2F&verifyRand=779643606&keepLogin=0"
+				},
+				"url": {
+					"raw": "http://39.98.139.127/user-login.html",
+					"protocol": "http",
+					"host": [
+						"39",
+						"98",
+						"139",
+						"127"
+					],
+					"path": [
+						"user-login.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://39.98.139.127/my/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "86665ef6-e599-47ae-9baa-c2ef5142b08f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"4月天\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Referer",
+						"value": "http://39.98.139.127/user-login-L2luZGV4Lmh0bWw=.html"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "zh-CN,zh;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "Cookie",
+						"value": "windowHeight=666; windowWidth=1280; zentaosid=qcq4qscl369340m0fhuavu8hd0; lang=zh-cn; device=desktop; preBranch=0; bugModule=0; lastBugModule=0; moduleBrowseParam=0; productBrowseParam=0; projectTaskOrder=status%2Cid_desc; preProductID=2; storyModule=0; lastProduct=2; productStoryOrder=id_desc; lastCaseModule=0; caseModule=0; selfClose=0; storyPreProjectID=3; storyModuleParam=0; storyProductParam=0; storyBranchParam=0; lastStoryModule=0; projectStoryOrder=id_desc; qaBugOrder=openedDate_desc; theme=default; lastProject=4; preProjectID=4; windowHeight=666; ajax_lastNext=on; windowWidth=745"
+					}
+				],
+				"url": {
+					"raw": "http://39.98.139.127/my/",
+					"protocol": "http",
+					"host": [
+						"39",
+						"98",
+						"139",
+						"127"
+					],
+					"path": [
+						"my",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5ba2550c-52c0-425f-aa57-699318b76183",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f7be0b3a-7d6b-49e8-87a2-2fb4149d8d63",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "38151fcf-01fb-4dd5-9750-bc1680efa7db",
+			"key": "username",
+			"value": "admin",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
